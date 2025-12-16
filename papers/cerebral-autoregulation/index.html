@@ -5,40 +5,212 @@
   <title>Data & Code – Multiscale modeling of blood circulation with cerebral autoregulation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Cache-busting version number -->
-  <link rel="stylesheet" href="style.css?v=20251216">
+  <style>
+    :root{
+      --accent:#1f4f8f;
+      --accent-soft:#e8f0fb;
+      --border:#e6e8eb;
+      --text:#1f2328;
+      --muted:#667085;
+      --bg:#fafafa;
+      --card:#ffffff;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.65;
+    }
+    .page{
+      max-width:980px;
+      margin:0 auto;
+      padding:26px 16px 48px;
+    }
+    .panel{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px 18px 20px;
+    }
+    header.panel{
+      padding:20px 20px 18px;
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:1.7rem;
+      line-height:1.25;
+      letter-spacing:0.01em;
+    }
+    .subtitle{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+    .meta{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+    .meta strong{ color:var(--text); font-weight:600; }
+    .meta a{ color:var(--accent); text-decoration:none; }
+    .meta a:hover{ text-decoration:underline; }
+    .tag-row{ margin-top:10px; }
+    .tag{
+      display:inline-block;
+      padding:2px 9px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-size:0.78rem;
+      margin-right:6px;
+      margin-bottom:6px;
+      white-space:nowrap;
+    }
+
+    .nav{
+      margin-top:14px;
+      padding-top:12px;
+      border-top:1px solid #f0f1f2;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      font-size:0.92rem;
+    }
+    .nav a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    .nav a:hover{ text-decoration:underline; }
+
+    .section{
+      margin-top:14px;
+    }
+    .section-title{
+      margin:0 0 8px;
+      font-size:1.1rem;
+      border-left:4px solid var(--accent);
+      padding-left:10px;
+    }
+    .small{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+
+    /* Zenodo / PLOS-like content cards */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px 14px 12px;
+    }
+    .card h3{
+      margin:0 0 6px;
+      font-size:1.02rem;
+    }
+    .card p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+    .card .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      margin-top:8px;
+      font-size:0.92rem;
+    }
+    .card .actions a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    .card .actions a:hover{ text-decoration:underline; }
+
+    /* Video embed card */
+    .video-wrap{
+      border:1px solid #eef0f2;
+      border-radius:12px;
+      overflow:hidden;
+      background:#000;
+    }
+    video{
+      width:100%;
+      display:block;
+      background:#000;
+    }
+
+    /* Files table */
+    table.files{
+      width:100%;
+      border-collapse:collapse;
+      font-size:0.93rem;
+      margin-top:6px;
+    }
+    table.files th, table.files td{
+      border-bottom:1px solid #f0f1f2;
+      padding:8px 8px;
+      text-align:left;
+      vertical-align:top;
+    }
+    table.files th{
+      color:var(--muted);
+      font-weight:600;
+      background:#fbfbfc;
+    }
+    .badge{
+      display:inline-block;
+      padding:2px 7px;
+      border-radius:999px;
+      background:#f2f4f7;
+      color:#475467;
+      font-size:0.78rem;
+      white-space:nowrap;
+    }
+    code{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      background:#f6f8fa;
+      padding:2px 5px;
+      border-radius:5px;
+      font-size:0.85em;
+    }
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:0.85rem;
+      text-align:center;
+    }
+  </style>
 </head>
 
 <body>
 <div class="page">
 
-  <!-- Title block (NOT inside a card, Zenodo/PLOS style) -->
-  <header class="paper-header">
+  <!-- Top paper header (single-column journal style) -->
+  <header class="panel">
     <h1>Multiscale modeling of blood circulation with cerebral autoregulation</h1>
     <p class="subtitle">
       Data, code, and supplementary materials for:<br>
-      <em>
-        Multiscale modeling of blood circulation with cerebral autoregulation and network pathway analysis for
-        hemodynamic redistribution in the vascular network with anatomical variations and stenosis conditions
-      </em>
+      <em>Multiscale modeling of blood circulation with cerebral autoregulation and network pathway analysis for hemodynamic redistribution in the vascular network with anatomical variations and stenosis conditions</em>
     </p>
-  </header>
 
-  <!-- Metadata card -->
-  <section class="panel">
-    <div class="meta">
-      <p><strong>Authors:</strong> Jiawei Liu<sup>†</sup>, Atsushi Kanokobe, Hidenori Endo, Kuniyasu Niizuma, and Hiroshi Suito<sup>*</sup></p>
-      <p><strong>Affiliation:</strong> Advanced Institute for Materials Research (AIMR), Tohoku University, Sendai, Japan</p>
-      <p>
-        <strong>Persistent identifiers:</strong>
-        DOI: <span class="placeholder">to be assigned</span> ·
-        arXiv: <span class="placeholder">to be added</span>
-      </p>
-      <p>
-        <strong>Corresponding author:</strong>
-        <a href="mailto:liu.jiawei.e2@tohoku.ac.jp">liu.jiawei.e2@tohoku.ac.jp</a>
-      </p>
-    </div>
+    <p class="meta">
+      <strong>Authors:</strong>
+      Jiawei Liu<sup>†</sup>, Atsushi Kanokobe, Hidenori Endo, Kuniyasu Niizuma, and Hiroshi Suito<sup>*</sup><br>
+      <strong>Affiliation:</strong> Advanced Institute for Materials Research (AIMR), Tohoku University, Sendai, Japan<br>
+      <strong>Persistent identifiers:</strong>
+      DOI: <em>to be assigned</em> · arXiv: <em>to be added</em><br>
+      <strong>Corresponding author:</strong>
+      <a href="mailto:liu.jiawei.e2@tohoku.ac.jp">liu.jiawei.e2@tohoku.ac.jp</a>
+    </p>
 
     <div class="tag-row">
       <span class="tag">multiscale modeling</span>
@@ -55,122 +227,121 @@
       <a href="#code">MATLAB code</a>
       <a href="#figures">Figures</a>
       <a href="#packages">Figure packages (ZIP)</a>
-      <a href="#availability">Data Availability</a>
-      <a href="#citation">Citation</a>
+      <a href="#license">License & availability</a>
       <a href="../../index.html">Back to homepage</a>
     </nav>
-  </section>
+  </header>
 
   <!-- Abstract -->
   <section class="panel section" id="abstract">
     <h2 class="section-title">Abstract</h2>
 
     <p class="small">
-      Cerebral hemodynamics are fundamentally regulated by the Circle of Willis (CoW), which redistributes blood flow
-      via communicating arteries to maintain cerebral perfusion under anatomical variations and vascular stenosis.
-      In this study, we develop a multiscale circulation model by coupling a systemic hemodynamic framework with an
-      image-based cerebral arterial network reconstructed from medical imaging data.
+      Cerebral hemodynamics are fundamentally regulated by the Circle of Willis (CoW),
+      which redistributes blood flow via communicating arteries to maintain cerebral perfusion
+      under anatomical variations and vascular stenosis. In this study, we develop a multiscale
+      circulation model by coupling a systemic hemodynamic framework with an image-based cerebral
+      arterial network reconstructed from medical imaging data.
     </p>
 
     <p class="small">
-      The model integrates a cerebral autoregulation mechanism (CAM) and enables quantitative analysis of flow
-      redistribution across the CoW under normal, anatomically varied, and pathological stenosis conditions.
-      Baseline simulations reproduce physiological flow distributions with negligible collateral activation,
-      consistent with clinical observations.
+      The model integrates a cerebral autoregulation mechanism (CAM) and enables quantitative analysis
+      of flow redistribution across the CoW under normal, anatomically varied, and pathological stenosis
+      conditions. Baseline simulations reproduce physiological flow distributions with negligible collateral
+      activation, consistent with clinical observations.
     </p>
 
     <p class="small">
-      In contrast, anatomical variations and progressive stenosis induce distinct collateral pathway recruitment patterns,
-      with early activation of the anterior communicating artery (ACoA) and structure-dependent engagement of posterior
-      communicating arteries (PCoAs). A pathway-based source-to-sink flow analysis is further introduced to quantify the
-      dynamic reconfiguration of collateral pathways in response to structural changes in the vascular network.
+      In contrast, anatomical variations and progressive stenosis induce distinct collateral pathway recruitment
+      patterns, with early activation of the anterior communicating artery (ACoA) and structure-dependent engagement
+      of posterior communicating arteries (PCoAs). A pathway-based source-to-sink flow analysis is further introduced
+      to quantify the dynamic reconfiguration of collateral pathways in response to structural changes in the vascular network.
     </p>
 
     <p class="small" style="margin-bottom:0;">
       The proposed framework provides a physiologically interpretable and image-informed tool for investigating cerebral
-      blood flow regulation through functional collaterals, with potential applications in the diagnosis, prognosis,
-      and treatment planning of cerebrovascular diseases.
+      blood flow regulation through functional collaterals, with potential applications in the diagnosis, prognosis, and
+      treatment planning of cerebrovascular diseases.
     </p>
   </section>
 
-  <!-- Videos -->
+  <!-- Videos (Zenodo/PLOS-like embedded cards) -->
   <section class="panel section" id="videos">
-    <h2 class="section-title">Supplementary videos</h2>
+    <h2 class="section-title">Videos</h2>
     <p class="small">
-      The videos are embedded for immediate viewing (Zenodo/PLOS-style). Files are located in <code>videos/</code>.
-      Download links are intentionally not shown. (Note: as with any web video, absolute download prevention is not possible.)
+      Embedded videos for quick inspection. Each video can also be opened directly (and downloaded) from the link.
+      Place your MP4 files under <code>videos/</code>.
     </p>
 
     <div class="grid">
 
-      <article class="card">
-        <h3>Supplementary Video S1. Model overview and vascular network</h3>
-        <p>Schematic overview of the multiscale circulation model and the image-based cerebral arterial network.</p>
-
+      <!-- Video Card 1 -->
+      <div class="card">
+        <h3>Video 1. Model overview and vascular network</h3>
+        <p>
+          Schematic overview of the multiscale circulation model and the image-based cerebral arterial network.
+        </p>
         <div class="video-wrap">
-          <video
-            controls
-            preload="metadata"
-            controlsList="nodownload noplaybackrate"
-            disablePictureInPicture
-            oncontextmenu="return false">
-            <source src="videos/S1_model_overview.mp4?v=20251216" type="video/mp4">
+          <video controls preload="metadata">
+            <source src="videos/Video1_model_overview.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
+        <div class="actions">
+          <a href="videos/Video1_model_overview.mp4">Open video</a>
+          <a href="videos/Video1_model_overview.mp4" download>Download MP4</a>
+        </div>
+      </div>
 
-        <p class="card-footnote small">
-          File: <code>videos/S1_model_overview.mp4</code>
+      <!-- Video Card 2 -->
+      <div class="card">
+        <h3>Video 2. Cerebral autoregulation response</h3>
+        <p>
+          Dynamic activation of cerebral autoregulation mechanisms in response to perfusion pressure changes.
         </p>
-      </article>
-
-      <article class="card">
-        <h3>Supplementary Video S2. Cerebral autoregulation response</h3>
-        <p>Dynamic activation of cerebral autoregulation mechanisms in response to perfusion pressure changes.</p>
-
         <div class="video-wrap">
-          <video
-            controls
-            preload="metadata"
-            controlsList="nodownload noplaybackrate"
-            disablePictureInPicture
-            oncontextmenu="return false">
-            <source src="videos/S2_autoregulation_response.mp4?v=20251216" type="video/mp4">
+          <video controls preload="metadata">
+            <source src="videos/Video2_autoregulation_response.mp4" type="video/mp4">
           </video>
         </div>
+        <div class="actions">
+          <a href="videos/Video2_autoregulation_response.mp4">Open video</a>
+          <a href="videos/Video2_autoregulation_response.mp4" download>Download MP4</a>
+        </div>
+      </div>
 
-        <p class="card-footnote small">
-          File: <code>videos/S2_autoregulation_response.mp4</code>
+      <!-- Video Card 3 -->
+      <div class="card">
+        <h3>Video 3. Hemodynamic redistribution under stenosis</h3>
+        <p>
+          Flow redistribution and collateral pathway recruitment under progressive arterial stenosis conditions.
         </p>
-      </article>
-
-      <article class="card">
-        <h3>Supplementary Video S3. Hemodynamic redistribution under stenosis</h3>
-        <p>Flow redistribution and collateral pathway recruitment under progressive arterial stenosis conditions.</p>
-
         <div class="video-wrap">
-          <video
-            controls
-            preload="metadata"
-            controlsList="nodownload noplaybackrate"
-            disablePictureInPicture
-            oncontextmenu="return false">
-            <source src="videos/S3_stenosis_redistribution.mp4?v=20251216" type="video/mp4">
+          <video controls preload="metadata">
+            <source src="videos/Video3_stenosis_cases.mp4" type="video/mp4">
           </video>
         </div>
-
-        <p class="card-footnote small">
-          File: <code>videos/S3_stenosis_redistribution.mp4</code>
-        </p>
-      </article>
+        <div class="actions">
+          <a href="videos/Video3_stenosis_cases.mp4">Open video</a>
+          <a href="videos/Video3_stenosis_cases.mp4" download>Download MP4</a>
+        </div>
+      </div>
 
     </div>
+
+    <p class="small" style="margin-top:10px; margin-bottom:0;">
+      Note: GitHub has a per-file upload limit (~100 MB). If any video exceeds the limit,
+      consider compressing it (e.g., 720p) or hosting it on OSF/YouTube and linking/embedding it here.
+    </p>
   </section>
 
   <!-- MATLAB .mat data -->
   <section class="panel section" id="data-mat">
     <h2 class="section-title">MATLAB data (.mat)</h2>
-    <p class="small">Place MATLAB <code>.mat</code> files under <code>data_mat/</code> and list them here.</p>
+    <p class="small">
+      MATLAB data files containing simulated pressure/flow time series and state variables.
+      Place files under <code>data_mat/</code> and update entries below.
+    </p>
 
     <table class="files">
       <thead>
@@ -182,17 +353,18 @@
         </tr>
       </thead>
       <tbody>
+        <!-- TODO: replace with real filenames/sizes -->
         <tr>
-          <td><a href="data_mat/hemo_timeseries.mat?v=20251216">hemo_timeseries.mat</a></td>
+          <td><a href="data_mat/hemo_timeseries.mat">hemo_timeseries.mat</a></td>
           <td><span class="badge">MAT</span></td>
-          <td class="muted">~45 MB</td>
+          <td style="color:var(--muted);">~45 MB</td>
           <td>Pressure and flow time series for all vascular segments and scenarios.</td>
         </tr>
         <tr>
-          <td><a href="data_mat/cam_states.mat?v=20251216">cam_states.mat</a></td>
+          <td><a href="data_mat/cam_states.mat">cam_states.mat</a></td>
           <td><span class="badge">MAT</span></td>
-          <td class="muted">~30 MB</td>
-          <td>Dynamic states of cerebral autoregulation mechanisms (CAM).</td>
+          <td style="color:var(--muted);">~30 MB</td>
+          <td>Time-dependent states of cerebral autoregulation mechanisms.</td>
         </tr>
       </tbody>
     </table>
@@ -201,7 +373,9 @@
   <!-- CSV data -->
   <section class="panel section" id="data-csv">
     <h2 class="section-title">CSV data</h2>
-    <p class="small">Place CSV files under <code>data_csv/</code> and list them here.</p>
+    <p class="small">
+      CSV files for parameters and summarized outputs. Place files under <code>data_csv/</code>.
+    </p>
 
     <table class="files">
       <thead>
@@ -213,16 +387,17 @@
         </tr>
       </thead>
       <tbody>
+        <!-- TODO: replace with real filenames/sizes -->
         <tr>
-          <td><a href="data_csv/inputs_parameters.csv?v=20251216">inputs_parameters.csv</a></td>
+          <td><a href="data_csv/inputs_parameters.csv">inputs_parameters.csv</a></td>
           <td><span class="badge">CSV</span></td>
-          <td class="muted">~200 kB</td>
-          <td>Model parameters and boundary conditions (geometry, stenosis, etc.).</td>
+          <td style="color:var(--muted);">~200 kB</td>
+          <td>Model parameters and boundary conditions (radii, lengths, stenosis, etc.).</td>
         </tr>
         <tr>
-          <td><a href="data_csv/cam_outputs.csv?v=20251216">cam_outputs.csv</a></td>
+          <td><a href="data_csv/cam_outputs.csv">cam_outputs.csv</a></td>
           <td><span class="badge">CSV</span></td>
-          <td class="muted">~300 kB</td>
+          <td style="color:var(--muted);">~300 kB</td>
           <td>Summary metrics of flow redistribution and perfusion indices.</td>
         </tr>
       </tbody>
@@ -232,7 +407,10 @@
   <!-- MATLAB code -->
   <section class="panel section" id="code">
     <h2 class="section-title">MATLAB code</h2>
-    <p class="small">Place MATLAB code under <code>code/</code>.</p>
+    <p class="small">
+      MATLAB scripts to run the multiscale circulation–CAM model and reproduce the main figures.
+      Place files under <code>code/</code>.
+    </p>
 
     <table class="files">
       <thead>
@@ -244,38 +422,42 @@
         </tr>
       </thead>
       <tbody>
+        <!-- TODO: replace with real script names/sizes -->
         <tr>
-          <td><a href="code/run_main.m?v=20251216">run_main.m</a></td>
+          <td><a href="code/run_main.m">run_main.m</a></td>
           <td><span class="badge">M</span></td>
-          <td class="muted">—</td>
-          <td>Main entry script for running the simulation pipeline.</td>
+          <td style="color:var(--muted);">~15 kB</td>
+          <td>Main entry script to run the full simulation pipeline.</td>
         </tr>
         <tr>
-          <td><a href="code/config_parameters.m?v=20251216">config_parameters.m</a></td>
+          <td><a href="code/config_parameters.m">config_parameters.m</a></td>
           <td><span class="badge">M</span></td>
-          <td class="muted">—</td>
-          <td>Scenario/parameter configuration (anatomy variations, stenosis degrees).</td>
+          <td style="color:var(--muted);">~8 kB</td>
+          <td>Set model parameters and stenosis/anatomical variation scenarios.</td>
         </tr>
         <tr>
-          <td><a href="code/plot_figures.m?v=20251216">plot_figures.m</a></td>
+          <td><a href="code/plot_figures.m">plot_figures.m</a></td>
           <td><span class="badge">M</span></td>
-          <td class="muted">—</td>
-          <td>Reproduce all main figures used in the manuscript.</td>
+          <td style="color:var(--muted);">~12 kB</td>
+          <td>Generate the main figures used in the manuscript.</td>
         </tr>
         <tr>
-          <td><a href="code/README.txt?v=20251216">README.txt</a></td>
+          <td><a href="code/README.txt">README.txt</a></td>
           <td><span class="badge">TXT</span></td>
-          <td class="muted">—</td>
-          <td>Environment setup and reproducibility instructions.</td>
+          <td style="color:var(--muted);">~4 kB</td>
+          <td>Instructions: environment setup and minimal steps for reproducibility.</td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <!-- Figures (optional) -->
+  <!-- Figures (optional individual files) -->
   <section class="panel section" id="figures">
     <h2 class="section-title">Figures</h2>
-    <p class="small">Optional single-figure files under <code>figures/</code>.</p>
+    <p class="small">
+      Optional single-figure files (e.g., PNG/PDF) placed under <code>figures/</code>.
+      You can keep everything in ZIPs only if you prefer.
+    </p>
 
     <table class="files">
       <thead>
@@ -287,20 +469,24 @@
         </tr>
       </thead>
       <tbody>
+        <!-- TODO: add if you have single-figure files -->
         <tr>
-          <td><a href="figures/fig1_overview.png?v=20251216">fig1_overview.png</a></td>
+          <td><a href="figures/fig1_overview.png">fig1_overview.png</a></td>
           <td><span class="badge">PNG</span></td>
-          <td class="muted">—</td>
-          <td>Example single-figure file (optional).</td>
+          <td style="color:var(--muted);">—</td>
+          <td>Figure 1 overview panel (optional, if provided separately).</td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <!-- ZIP packages -->
+  <!-- Figure packages -->
   <section class="panel section" id="packages">
     <h2 class="section-title">Figure packages (ZIP)</h2>
-    <p class="small">ZIP archives under <code>figure_packages/</code> containing panels and minimal data.</p>
+    <p class="small">
+      Each ZIP contains high-resolution figure panels (PNG/PDF) and minimal data to regenerate plots.
+      Place ZIP archives under <code>figure_packages/</code>.
+    </p>
 
     <table class="files">
       <thead>
@@ -312,65 +498,48 @@
         </tr>
       </thead>
       <tbody>
+        <!-- TODO: replace with your real list -->
         <tr>
-          <td><a href="figure_packages/Fig1.zip?v=20251216">Fig1.zip</a></td>
+          <td><a href="figure_packages/Fig1.zip">Fig1.zip</a></td>
           <td><span class="badge">ZIP</span></td>
-          <td class="muted">—</td>
+          <td style="color:var(--muted);">60.9 MB</td>
           <td>Figure 1: Model overview and vascular network structure.</td>
         </tr>
         <tr>
-          <td><a href="figure_packages/Fig2.zip?v=20251216">Fig2.zip</a></td>
+          <td><a href="figure_packages/Fig2.zip">Fig2.zip</a></td>
           <td><span class="badge">ZIP</span></td>
-          <td class="muted">—</td>
-          <td>Figure 2: Baseline hemodynamics and validation.</td>
+          <td style="color:var(--muted);">46.6 MB</td>
+          <td>Figure 2: Baseline hemodynamics and validation against reference data.</td>
         </tr>
         <tr>
-          <td><a href="figure_packages/Fig3.zip?v=20251216">Fig3.zip</a></td>
+          <td><a href="figure_packages/Fig3.zip">Fig3.zip</a></td>
           <td><span class="badge">ZIP</span></td>
-          <td class="muted">—</td>
-          <td>Figure 3: Redistribution under stenosis.</td>
+          <td style="color:var(--muted);">125.1 MB</td>
+          <td>Figure 3: Hemodynamic redistribution under stenosis conditions.</td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <!-- Data Availability (PLOS-friendly) -->
-  <section class="panel section" id="availability">
-    <h2 class="section-title">Data Availability</h2>
+  <!-- License -->
+  <section class="panel section" id="license">
+    <h2 class="section-title">License & availability</h2>
     <p class="small">
-      All data and MATLAB codes required to reproduce the results are publicly available on this page.
-      The repository includes MATLAB <code>.mat</code> data files, CSV tables, MATLAB source codes, and
-      supplementary videos (S1–S3). Persistent identifiers (DOI/arXiv) will be provided once assigned.
+      This page provides MATLAB <code>.mat</code> data files, MATLAB source codes (<code>.m</code>),
+      CSV files, figure files, and embedded MP4 videos required to reproduce the results.
+      Unless otherwise noted, code may be released under the MIT License and data under CC BY 4.0.
+      Please include <code>LICENSE</code> files if you would like explicit licensing.
+    </p>
+
+    <p class="small" style="margin-bottom:0;">
+      If you use these materials in academic work, please cite the paper (see the DOI/arXiv fields above).
+      For questions or issues, contact the corresponding author.
     </p>
   </section>
 
-  <!-- Citation -->
-  <section class="panel section" id="citation">
-    <h2 class="section-title">Citation</h2>
-    <p class="small">
-      Liu J., Kanokobe A., Endo H., Niizuma K., Suito H.<br>
-      <em>
-        Multiscale modeling of blood circulation with cerebral autoregulation and network pathway analysis for
-        hemodynamic redistribution in the vascular network with anatomical variations and stenosis conditions.
-      </em><br>
-      DOI: <span class="placeholder">to be assigned</span> · arXiv: <span class="placeholder">to be added</span>
-    </p>
-
-    <div class="block">
-      <p class="small" style="margin:0 0 6px;"><strong>BibTeX (placeholder)</strong></p>
-      <pre class="bibtex">@article{liu_multiscale_cerebral_autoregulation_20xx,
-  title   = {Multiscale modeling of blood circulation with cerebral autoregulation and network pathway analysis for hemodynamic redistribution in the vascular network with anatomical variations and stenosis conditions},
-  author  = {Liu, Jiawei and Kanokobe, Atsushi and Endo, Hidenori and Niizuma, Kuniyasu and Suito, Hiroshi},
-  journal = {PLOS Computational Biology},
-  year    = {20XX},
-  note    = {DOI: to be assigned; arXiv: to be added}
-}</pre>
-    </div>
-  </section>
-
-  <footer class="footer">
+  <div class="footer">
     &copy; <span id="y"></span> Jiawei Liu · Data & Code page
-  </footer>
+  </div>
 
 </div>
 
