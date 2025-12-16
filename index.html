@@ -2,37 +2,319 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jiawei Liu - Research</title>
+  <title>Jiawei Liu - Associate Professor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-    h1, h2 { color: #333; }
-    .video-list { margin-top: 20px; }
-    .video-item { margin-bottom: 15px; padding: 10px; border: 1px solid #ddd; border-radius: 6px; }
-    .video-item a { color: #0066cc; text-decoration: none; }
-    .video-item a:hover { text-decoration: underline; }
+    :root {
+      --accent: #1f4f8f;
+      --accent-light: #e6eef7;
+      --text-main: #222;
+      --text-muted: #666;
+      --border-color: #ddd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .name-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .name-title h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .name-title .position {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    nav {
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      margin-right: 14px;
+      text-decoration: none;
+      color: var(--accent);
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 28px;
+      padding: 16px 18px 18px;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    .profile-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+    }
+
+    .profile-left {
+      flex: 1 1 220px;
+    }
+
+    .profile-right {
+      flex: 2 1 280px;
+      font-size: 0.95rem;
+    }
+
+    .label {
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 6px 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .pub-item,
+    .talk-item,
+    .teach-item,
+    .video-item {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #eee;
+      font-size: 0.95rem;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .small-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .video-link {
+      display: inline-block;
+      margin-top: 4px;
+      text-decoration: none;
+      color: var(--accent);
+    }
+
+    .video-link:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: var(--accent-light);
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 16px 10px 32px;
+      }
+      section {
+        padding: 12px 12px 14px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Jiawei Liu - Research Videos</h1>
-  <p>
-    Welcome to my research page. Here you can watch some of my research result videos
-    via direct links or QR codes.
-  </p>
+<div class="page">
 
-  <h2>Video List</h2>
-  <div class="video-list">
+  <!-- Header -->
+  <header>
+    <div class="name-title">
+      <h1>Jiawei Liu</h1>
+      <div class="position">Associate Professor</div>
+    </div>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#videos">Research Videos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Profile -->
+  <section id="profile">
+    <h2>Profile</h2>
+    <div class="profile-main">
+      <div class="profile-left">
+        <p><span class="label">Name:</span> Jiawei Liu (刘 嘉炜)</p>
+        <p><span class="label">Position:</span> Associate Professor</p>
+        <p><span class="label">Affiliation:</span> Department of Applied Mathematics, XXX University</p>
+        <p><span class="label">Research Fields:</span><br>
+          Mathematical modeling · Multi-scale blood circulation · Wave propagation in porous media
+        </p>
+      </div>
+      <div class="profile-right">
+        <p>
+          My research focuses on mathematical modeling and numerical analysis of
+          multi-scale systems in biomechanics and geophysics, including
+          whole-body blood circulation, wave-induced fluid flow in porous media,
+          and coupled multi-physics problems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Multi-scale modeling of whole-body blood circulation and autoregulation</li>
+      <li>Wave propagation in porous and fractured media (Biot / BISQ / dual-porosity models)</li>
+      <li>Numerical analysis and high-performance computing for coupled PDE–ODE systems</li>
+      <li>Data assimilation and parameter estimation in physiological systems</li>
+    </ul>
+  </section>
+
+  <!-- Publications (sample, replace with your own) -->
+  <section id="publications">
+    <h2>Selected Publications</h2>
+
+    <div class="pub-item">
+      <span class="pub-title">
+        [1] J. Liu, et al., “Title of your key paper,” Journal Name, Year.
+      </span><br>
+      <span class="small-note">
+        Multi-scale wave-induced fluid flow model in dual-porosity media.
+      </span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-title">
+        [2] J. Liu, et al., “Another paper title,” Journal Name, Year.
+      </span><br>
+      <span class="small-note">
+        Whole-body blood circulation model coupled with cardiac function.
+      </span>
+    </div>
+
+    <!-- Add more items as needed -->
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+
+    <div class="teach-item">
+      <strong>Mathematical Modeling in Biomedicine</strong><br>
+      Graduate course, XXX University, 20XX–present.
+    </div>
+
+    <div class="teach-item">
+      <strong>Partial Differential Equations</strong><br>
+      Undergraduate course, XXX University, 20XX–20XX.
+    </div>
+
+    <!-- Add more courses as needed -->
+  </section>
+
+  <!-- Research Videos -->
+  <section id="videos">
+    <h2>Research Videos</h2>
+    <p class="small-note">
+      Each video below has a dedicated URL. You can generate a QR code for any link so that
+      people can scan and directly watch the video on their devices.
+    </p>
+
     <div class="video-item">
-      <strong>Video 1: Title of your research video</strong><br>
-      <a href="videos/video1.mp4">▶ Click here to watch (Video 1)</a>
+      <strong>Video 1: Multi-scale blood circulation model</strong><br>
+      <span class="small-note">
+        Numerical simulation of whole-body blood circulation and automatic regulation of flow distribution.
+      </span><br>
+      <!-- If you only upload mp4, link directly to the file -->
+      <a class="video-link" href="videos/video1.mp4">
+        ▶ Open Video 1 (MP4)
+      </a>
+      <!-- Or, if you create a dedicated page, use: href="video1.html" -->
     </div>
 
     <div class="video-item">
-      <strong>Video 2: Another research result</strong><br>
-      <a href="videos/video2.mp4">▶ Click here to watch (Video 2)</a>
+      <strong>Video 2: Wave-induced fluid flow in porous media</strong><br>
+      <span class="small-note">
+        Frequency-dependent wave propagation and attenuation in dual-porosity rocks.
+      </span><br>
+      <a class="video-link" href="videos/video2.mp4">
+        ▶ Open Video 2 (MP4)
+      </a>
     </div>
 
-    <!-- 以后你可以继续复制增加 video-item -->
-  </div>
+    <!-- Add more video entries as needed -->
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <span class="label">Email:</span> jiawei.liu[at]example.edu<br>
+      <span class="label">Office:</span> Room XXX, Building YYY, XXX University
+    </p>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Jiawei Liu. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  // Update year automatically
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
