@@ -35,4 +35,23 @@ Running `main_WithCAM_coupled_solver.m` performs:
 - MATLAB R2018b or newer versions (base MATLAB only; no additional toolboxes required) 
 - No external data files beyond the three `.mat` input files included
 
-- ![demo](ArrowSt1Paths.gif)
+## Supplementary Videos
+
+### S1. Cerebral and Arterial Systems
+
+Coupled whole-body arterial system and image-based cerebral circulation network.  
+Time-dependent inlet flow conditions and cerebral arterial perfusion are illustrated.
+
+<p align="center">
+  <img src="Figures/Cerebral and Arterial systems.gif" width="600">
+</p>
+
+---
+
+### S2. Cerebral Circulation With and Without Stenosis
+
+Comparison of cerebral hemodynamics under normal and stenotic conditions, highlighting bifurcation–confluence transitions and collateral pathway recruitment.
+
+<p align="center">
+  <img src="Figures/Cerebral circulation with and without stenosis.gif" width="600">
+</p>
