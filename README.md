@@ -20,9 +20,7 @@ Running `main_WithCAM_coupled_solver.m` performs:
    - Condition 2: PCA (Fetal-type posterior cerebral artery, P1 segment absent)
    - Condition 3: ACA (Missing anterior cerebral artery A1 segment)
 
-2. **WithoutCAM reference** computation via bifurcation propagation (without CAM)
-
-3. **Comparison figure generation**: three bar charts comparing model results against clinical measurements (with/without CAM vs experimental mean ± std from Zarrinkoob et al. (2015) )
+2. **Comparison figure generation**: three bar charts comparing model results against clinical statistics (with/without CAM vs [mean ± s.d.] from Zarrinkoob et al. (2015) )
 
 ### Outputs
 
