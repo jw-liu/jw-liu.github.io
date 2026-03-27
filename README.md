@@ -35,20 +35,20 @@ Running `main_WithCAM_coupled_solver.m` performs:
 
 ## Supplementary Videos
 ### S1. Dynamical flow propagation across the cerebral vascular network
-Dynamical flow propagation across the cerebral vascular network. Time-dependent cerebral arterial perfusion under the three conditions are illustrated.
+Time-dependent cerebral arterial perfusion under the three conditions are illustrated.
 1. **Baseline**
 <p align="center">
-  <img src="Figures/baseline.gif" width="800">
+  <img src="Figures/baseline.gif" width="700">
 </p>
 
 2. **PCA**
 <p align="center">
-  <img src="Figures/PCA.gif" width="800">
+  <img src="Figures/PCA.gif" width="700">
 </p>
 
 3. **ACA**
 <p align="center">
-  <img src="Figures/ACA.gif" width="800">
+  <img src="Figures/ACA.gif" width="700">
 </p>
 
 ---
@@ -59,7 +59,7 @@ Coupled whole-body arterial system and image-based cerebral circulation network.
 Time-dependent inlet flow conditions and cerebral arterial perfusion are illustrated.
 
 <p align="center">
-  <img src="Figures/Cerebral and Arterial systems.gif" width="800">
+  <img src="Figures/Cerebral and Arterial systems.gif" width="700">
 </p>
 
 ---
@@ -69,5 +69,5 @@ Time-dependent inlet flow conditions and cerebral arterial perfusion are illustr
 Comparison of cerebral hemodynamics under normal and stenotic conditions, highlighting bifurcation–confluence transitions and collateral pathway recruitment.
 
 <p align="center">
-  <img src="Figures/Cerebral circulation with and without stenosis.gif" width="800">
+  <img src="Figures/Cerebral circulation with and without stenosis.gif" width="700">
 </p>
