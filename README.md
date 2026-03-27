@@ -36,16 +36,17 @@ Running `main_WithCAM_coupled_solver.m` performs:
 ## Supplementary Videos
 ### S1. Dynamical flow propagation across the cerebral vascular network
 Dynamical flow propagation across the cerebral vascular network. Time-dependent cerebral arterial perfusion under the three conditions are illustrated.
-1. **Baseline
+1. **Baseline**
 <p align="center">
   <img src="Figures/baseline.gif" width="800">
 </p>
-2. **PCA
+
+2. **PCA**
 <p align="center">
   <img src="Figures/PCA.gif" width="800">
 </p>
 
-3. **ACA
+3. **ACA**
 <p align="center">
   <img src="Figures/ACA.gif" width="800">
 </p>
